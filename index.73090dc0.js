@@ -685,7 +685,12 @@ const x=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       }
 
       .led.on {
-        background: #78D732;
+        animation: blink 1.5s linear infinite alternate;
+      }
+
+      @keyframes blink {
+        0%, 70% { background: red }
+        71%, 100% { background: #111 }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
     <style>${p.styles}</style>
